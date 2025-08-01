@@ -117,8 +117,7 @@ void main_menu_scene_update(void *sVar, s32 dArg) {
         prevButton = sMainMenuButton;
         if (D_030053b8 & DPAD_UP) {
             sMainMenuButton -= 1;
-
-            if (sMainMenuButton < GAME_SELECT) {
+            if (sMainMenuButton < 0) {
                 sMainMenuButton = TOTAL_MAIN_MENU_BUTTONS - 1;
             }
         }
